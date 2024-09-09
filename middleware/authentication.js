@@ -5,6 +5,7 @@ const {UnauthenticatedError} = require('../errors');
 
 const auth = async (req, res, next) =>{
     // check header 
+    console.log('Authentication middleware hit');
     const authHeader = req.headers.authorization;
     
     if(!authHeader || !authHeader.startsWith('Bearer ')) {
